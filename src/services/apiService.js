@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://localhost:7029'; 
+const API_URL = window.location.href.includes("localhost") ? 'https://localhost:7029' : 'https://starwarsapi-e9evg0b8dhg8czbw.canadacentral-01.azurewebsites.net'; 
 
 export const getToken = async () => {
   const response = await axios.post(`${API_URL}/Token`, {
